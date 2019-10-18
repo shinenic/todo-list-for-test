@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/todo-list-for-test/static/css/main.dc31de75.chunk.css",
+    "main.js": "/todo-list-for-test/static/js/main.5b5213aa.chunk.js",
+    "main.js.map": "/todo-list-for-test/static/js/main.5b5213aa.chunk.js.map",
+    "runtime-main.js": "/todo-list-for-test/static/js/runtime-main.a2acd1aa.js",
+    "runtime-main.js.map": "/todo-list-for-test/static/js/runtime-main.a2acd1aa.js.map",
+    "static/js/2.c083a38f.chunk.js": "/todo-list-for-test/static/js/2.c083a38f.chunk.js",
+    "static/js/2.c083a38f.chunk.js.map": "/todo-list-for-test/static/js/2.c083a38f.chunk.js.map",
+    "index.html": "/todo-list-for-test/index.html",
+    "precache-manifest.f8541da7e784227bc960c51714ffc3b1.js": "/todo-list-for-test/precache-manifest.f8541da7e784227bc960c51714ffc3b1.js",
+    "service-worker.js": "/todo-list-for-test/service-worker.js",
+    "static/css/main.dc31de75.chunk.css.map": "/todo-list-for-test/static/css/main.dc31de75.chunk.css.map",
+    "static/media/Index.scss": "/todo-list-for-test/static/media/undo.3b22be57.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2acd1aa.js",
+    "static/js/2.c083a38f.chunk.js",
+    "static/css/main.dc31de75.chunk.css",
+    "static/js/main.5b5213aa.chunk.js"
+  ]
+}
