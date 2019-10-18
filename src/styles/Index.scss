@@ -1,0 +1,68 @@
+@import "./Input";
+@import "./Switch";
+@import "./TodoList";
+
+$bg-color: #dddddd;
+$text-color: #333;
+
+html,
+body,
+#root {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei",
+    "標楷體", "DFKai-SB", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: $bg-color;
+  box-sizing: border-box;
+  // height: 100%;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.app {
+  color: $text-color;
+  width: 100%;
+  margin: 100px auto auto auto;
+  text-align: center;
+}
+
+.link {
+  position: fixed;
+  top: 9px;
+  right: 9px;
+  height: 20px;
+  width: 300px;
+  font-size: 10px;
+  text-align: end;
+  cursor: pointer;
+  & > div {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 5px;
+    & > a {
+      position: relative;
+      top: -4px;
+      color: #777;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+  & .github-icon {
+    content: url("../image/github.svg");
+    max-height: 20px;
+    max-width: 20px;
+    display: inline-block;
+  }
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,40 @@
+$input-width: 80%;
+
+input[type=text] {
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: white;
+  
+  padding: 10px 40px 10px 10px;
+  transition:.4s;
+
+  &:focus {
+    border: 2px solid #333;
+    outline: none;
+  }
+
+  &:focus ~ .input-add-img{
+    filter: invert(0);
+  }
+}
+
+.input-container {
+  margin:0 auto;
+  width: $input-width;
+  max-width:500px;
+  position: relative;
+}
+
+.input-add-img {
+  content:url('../image/add.svg');
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  cursor: pointer;
+  filter: invert(0.8);
+  transition:filter .1s;
+}

@@ -1,0 +1,84 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+%center {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+.todolist-grid-container {
+  display: grid;
+  font-size:18px;
+  width: 350px;
+  min-height: 50px;
+  grid-template-columns: 1fr 50px 50px;
+  grid-template-areas: "text modify remove";
+
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+
+  margin:15px auto;
+  border-bottom:3px solid #333;
+
+  transition:background .5s, border .5s;
+
+  img {
+    max-width: 20px;
+    max-height: 20px;
+    cursor: pointer;
+    filter: invert(0);
+    transition: filter 0.1s;
+    &:hover {
+      filter: invert(0.3);
+    }
+    &:active {
+      filter: invert(0.5);
+    }
+  }
+
+  & > div:nth-child(1) {
+    @extend %center;
+    justify-content: start;
+    text-align: start;
+    grid-area: text;
+    padding:10px;
+  }
+  & > div:nth-child(2) {
+    @extend %center;
+    grid-area: modify;
+  }
+  & > div:nth-child(3) {
+    @extend %center;
+    grid-area: remove;
+  }
+}
+.icon-uncheck {
+  content: url("../image/undo.svg");
+}
+.icon-check {
+  content: url("../image/check.svg");
+}
+.icon-remove {
+  content: url("../image/remove.svg");
+  max-width: 14px;
+  max-height: 14px;
+}
+
+.todo-completed {
+  background: #AAA;
+  border-bottom:3px solid #AAA;
+  border-radius: 3px;
+}
+
+.no-data {
+  margin-top:50px;
+}
