@@ -18,7 +18,7 @@
 
 * React
 * Redux
-* Jest 搭配 enzymy 進行 unit test
+* Jest 搭配 enzyme 進行 unit test
 * SCSS
 
 
