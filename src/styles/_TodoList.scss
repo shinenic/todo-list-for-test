@@ -15,7 +15,7 @@
 
 .todolist-grid-container {
   display: grid;
-  font-size:18px;
+  font-size: 18px;
   width: 350px;
   min-height: 50px;
   grid-template-columns: 1fr 50px 50px;
@@ -26,10 +26,10 @@
   animation-duration: 0.3s;
   animation-fill-mode: both;
 
-  margin:15px auto;
-  border-bottom:3px solid #333;
+  margin: 15px auto;
+  border-bottom: 3px solid #333;
 
-  transition:background .5s, border .5s;
+  transition: background 0.5s, border 0.5s;
 
   img {
     max-width: 20px;
@@ -50,7 +50,7 @@
     justify-content: start;
     text-align: start;
     grid-area: text;
-    padding:10px;
+    padding: 10px;
   }
   & > div:nth-child(2) {
     @extend %center;
@@ -61,24 +61,25 @@
     grid-area: remove;
   }
 }
-.icon-uncheck {
-  content: url("../image/undo.svg");
-}
-.icon-check {
-  content: url("../image/check.svg");
-}
-.icon-remove {
-  content: url("../image/remove.svg");
-  max-width: 14px;
-  max-height: 14px;
-}
-
-.todo-completed {
-  background: #AAA;
-  border-bottom:3px solid #AAA;
-  border-radius: 3px;
+.todo {
+  &__icon--uncheck {
+    content: url("../image/undo.svg");
+  }
+  &__icon--check {
+    content: url("../image/check.svg");
+  }
+  &__icon--remove {
+    content: url("../image/remove.svg");
+    max-width: 14px;
+    max-height: 14px;
+  }
+  &--completed {
+    background: #aaa;
+    border-bottom: 3px solid #aaa;
+    border-radius: 3px;
+  }
 }
 
 .no-data {
-  margin-top:50px;
+  margin-top: 50px;
 }

@@ -46,14 +46,14 @@ class TodoList extends Component {
         : this.props.todos.todoList.filter(value => this.state.display === 'TODO' ? !value.completed : value.completed)
     return todoList.map((value, index) => {
       return (
-        <div name="todo" key={index + this.state.display} className={value.completed ? "todolist-grid-container todo-completed" : "todolist-grid-container todo-uncompleted"}>
+        <div name="todo" key={index + this.state.display} className={value.completed ? "todo todolist-grid-container todo--completed" : "todo todolist-grid-container todo--uncompleted"}>
           <div style={value.completed ? { textDecoration: "line-through" } : {}}>{value.content}</div>
           <div>
-            <img name="uncheck" className={value.completed ? "icon-uncheck" : "icon-uncheck hide"} onClick={() => this.props.toggleTodo(value.id, false)} alt="uncheck" />
-            <img name="check" className={value.completed ? "icon-check hide" : "icon-check"} onClick={() => this.props.toggleTodo(value.id, true)} alt="check" />
+            <img name="uncheck" className={value.completed ? "todo__icon--uncheck" : "todo__icon--uncheck hide"} onClick={() => this.props.toggleTodo(value.id, false)} alt="uncheck" />
+            <img name="check" className={value.completed ? "todo__icon--check hide" : "todo__icon--check"} onClick={() => this.props.toggleTodo(value.id, true)} alt="check" />
           </div>
           <div>
-            <img name="remove" className="icon-remove" onClick={() => this.props.removeTodo(value.id)} alt="remove" />
+            <img name="remove" className="todo__icon--remove" onClick={() => this.props.removeTodo(value.id)} alt="remove" />
           </div>
         </div>)
     })
@@ -63,9 +63,9 @@ class TodoList extends Component {
     return (
       <div>
         <div className="switch-container">
-          <div className={this.state.display === "TODO" ? "switch-active" : undefined} onClick={() => this.switchDisplayMode('TODO')}>Todo</div>
-          <div className={this.state.display === "ALL" ? "switch-active" : undefined} onClick={() => this.switchDisplayMode('ALL')}>All</div>
-          <div className={this.state.display === "COMPLETED" ? "switch-active" : undefined} onClick={() => this.switchDisplayMode('COMPLETED')}>Completed</div>
+          <div className={this.state.display === "TODO" ? "switch--active" : undefined} onClick={() => this.switchDisplayMode('TODO')}>Todo</div>
+          <div className={this.state.display === "ALL" ? "switch--active" : undefined} onClick={() => this.switchDisplayMode('ALL')}>All</div>
+          <div className={this.state.display === "COMPLETED" ? "switch--active" : undefined} onClick={() => this.switchDisplayMode('COMPLETED')}>Completed</div>
         </div>
         {!!this.props.todos.todoList && this.renderComments()}
         <div className="no-data">

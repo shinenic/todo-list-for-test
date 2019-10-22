@@ -20,8 +20,8 @@ describe('components', () => {
       wrapped.find('.switch-container > div').map((option, index) => {
         option.simulate('click')
         wrapped.update()
-        // expect(wrapped.find('.switch-container > div').get(index).props.className).toEqual('switch-active')
-        expect(wrapped.find('.switch-container > div').at(index).hasClass('switch-active')).toEqual(true);
+        // expect(wrapped.find('.switch-container > div').get(index).props.className).toEqual('switch--active')
+        expect(wrapped.find('.switch-container > div').at(index).hasClass('switch--active')).toEqual(true);
       })
     })
   })
@@ -110,26 +110,26 @@ describe('multiple todo data', () => {
       stateWrapped.update()
     })
     it('should tag uncompleted when a completed tag todo uncompleted', () => {
-      const completed = stateWrapped.find('[name="todo"].todo-completed').at(0)
+      const completed = stateWrapped.find('[name="todo"].todo--completed').at(0)
       completed.find('img[name="uncheck"]').simulate('click')
       stateWrapped.update()
-      expect(stateWrapped.find('[name="todo"].todo-completed').length).toEqual(0)
+      expect(stateWrapped.find('[name="todo"].todo--completed').length).toEqual(0)
     })
     it('should tag completed when a uncompleted tag todo completed', () => {
-      const completed = stateWrapped.find('[name="todo"].todo-uncompleted').at(0)
+      const completed = stateWrapped.find('[name="todo"].todo--uncompleted').at(0)
       completed.find('img[name="check"]').simulate('click')
       stateWrapped.update()
-      expect(stateWrapped.find('[name="todo"].todo-uncompleted').length).toEqual(0)
+      expect(stateWrapped.find('[name="todo"].todo--uncompleted').length).toEqual(0)
     })
     it('should disapper todo when remove todo', () => {
-      const completed = stateWrapped.find('[name="todo"].todo-uncompleted').at(0)
+      const completed = stateWrapped.find('[name="todo"].todo--uncompleted').at(0)
       completed.find('img[name="remove"]').simulate('click')
       stateWrapped.update()
       expect(stateWrapped.find('[name="todo"]').length).toEqual(1)
     })
     it('should show no data hint when there is no completed todos and uncompleted todos',()=>{
-      stateWrapped.find('[name="todo"].todo-uncompleted img[name="remove"]').simulate('click')
-      stateWrapped.find('[name="todo"].todo-completed img[name="remove"]').simulate('click')
+      stateWrapped.find('[name="todo"].todo--uncompleted img[name="remove"]').simulate('click')
+      stateWrapped.find('[name="todo"].todo--completed img[name="remove"]').simulate('click')
       stateWrapped.update()
       expect(stateWrapped.find('h4').length).toEqual(1)
     })

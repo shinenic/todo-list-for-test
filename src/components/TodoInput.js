@@ -24,14 +24,14 @@ class TodoInput extends Component {
 
   render() {
     return (
-      <div className="input-container">
+      <div className="main-input">
         <input
           type="text"
           placeholder="add something to do..."
           value={this.state.todo}
           onChange={this.handleChange}
           onKeyDown={this.handleKeyDown} />
-        <img alt="add" className="input-add-img" onClick={this.addTodo}></img>
+        <img alt="add" className="main-input__add-img" onClick={this.addTodo}></img>
       </div>
     )
   }
